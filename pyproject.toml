@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "marketplace"
+version = "0.1.0"
+description = "Маркетплейс"
+authors = ["kniazev.ds <kniazev.ds@dozen.mephi.ru>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "bot" },
+    { include = "models" },
+    { include = "utils" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+loguru = "^0.5.3"
+python-dotenv = "^0.21.0"
+aiogram = "^3.20.0.post0"
+aiohttp = "^3.11.18"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.272"
+black = "^23.1.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
